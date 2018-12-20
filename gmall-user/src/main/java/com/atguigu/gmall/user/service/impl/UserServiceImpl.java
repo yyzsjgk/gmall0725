@@ -59,4 +59,16 @@ public class UserServiceImpl implements UserService {
 
         return userAddress1;
     }
+
+    @Override
+    public UserInfo login(UserInfo userInfo) {
+
+        UserInfo userInfo1 = userInfoMapper.selectOne(userInfo);
+
+        if(null!=userInfo1){
+            // 用户数据放入redis
+        }
+
+        return userInfo1;
+    }
 }

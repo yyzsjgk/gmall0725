@@ -110,9 +110,6 @@ public class GmallListServiceApplicationTests {
 	}
 
 
-
-
-	@Test
 	public void test() throws IOException {
 		List<SkuInfo> skuInfos = skuService.getMySkuInfo("61");
 		System.out.println(skuInfos);
@@ -130,6 +127,5 @@ public class GmallListServiceApplicationTests {
 			jestClient.execute(build);
 		}
 	}
-
 
 }

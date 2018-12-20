@@ -90,11 +90,6 @@ public class SkuServiceImpl implements SkuService{
                 if(skuInfo!=null){
                     // 将数据库的信息同步到缓存
 
-                    try {
-                        Thread.sleep(9000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     System.err.println(Thread.currentThread().getName()+"号线程，从db中得到数据，放入缓存");
                     jedis.set("sku:" + skuId + ":info",JSON.toJSONString(skuInfo));
                     System.err.println(Thread.currentThread().getName()+"号线程，将锁释放。。。。。");
